@@ -1,4 +1,4 @@
-#FizzBuzz Kata 
+# FizzBuzz Kata 
 
 This is the implementation for solving [FizzBuzz Kata](https://kata-log.rocks/fizz-buzz-kata) in Kotlin with TDD.
 
