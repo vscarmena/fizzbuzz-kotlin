@@ -32,4 +32,10 @@ class FizzBuzzTest {
         assertEquals("Buzz", fizzBuzz.evaluate(number))
     }
 
+    @ParameterizedTest
+    @CsvSource("15", "30")
+    fun `evaluate numbers multiple of 3 and 5`(number: Int){
+        assertEquals("FizzBuzz", fizzBuzz.evaluate(number))
+    }
+
 }
