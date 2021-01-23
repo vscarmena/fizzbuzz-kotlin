@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
 import kotlin.test.assertEquals
 
 class FizzBuzzTest {
@@ -11,24 +12,16 @@ class FizzBuzzTest {
         fizzBuzz = FizzBuzz()
     }
 
-    @Test
-    fun `evaluate number 1 return 1`() {
-        assertEquals("1", fizzBuzz.evaluate(1))
+    @ParameterizedTest
+    @CsvSource("1, 1", "2, 2")
+    fun `evaluate regular numbers`(number: Int, expected: String){
+        assertEquals(expected, fizzBuzz.evaluate(number))
     }
 
-    @Test
-    fun `evaluate number 2 return 2`() {
-        assertEquals("2", fizzBuzz.evaluate(2))
-    }
-
-    @Test
-    fun `evaluate number 3 return Fizz`() {
-        assertEquals("Fizz", fizzBuzz.evaluate(3))
-    }
-
-    @Test
-    fun `evaluate number 6 return Fizz`() {
-        assertEquals("Fizz", fizzBuzz.evaluate(6))
+    @ParameterizedTest
+    @CsvSource("3", "6")
+    fun `evaluate numbers multiple of 3`(number: Int){
+        assertEquals("Fizz", fizzBuzz.evaluate(number))
     }
 
 }
