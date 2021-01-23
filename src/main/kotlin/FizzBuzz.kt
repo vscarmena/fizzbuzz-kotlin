@@ -2,8 +2,8 @@ class FizzBuzz {
 
     fun generateValues(): MutableList<String> {
         val evaluatedNumbers = mutableListOf<String>()
-        for(i in 1..100) {
-            evaluatedNumbers.add(i-1, evaluate(i))
+        for (i in 1..100) {
+            evaluatedNumbers.add(i - 1, evaluate(i))
         }
         return evaluatedNumbers
     }
