@@ -8,7 +8,7 @@ class FizzBuzz {
         return evaluatedNumbers
     }
 
-    fun evaluate(number: Int): String {
+    private fun evaluate(number: Int): String {
         if (number % 3 == 0 && number % 5 == 0) {
             return "FizzBuzz"
         }

@@ -17,32 +17,31 @@ class FizzBuzzTest {
 
     @ParameterizedTest
     @CsvSource("1, 1", "2, 2")
-    fun `evaluate regular numbers`(number: Int, expected: String){
-        assertEquals(expected, fizzBuzz.evaluate(number))
+    fun `evaluate regular numbers`(number: Int, expected: String) {
+        assertEquals(expected, fizzBuzz.generateValues()[number - 1])
     }
 
     @ParameterizedTest
     @CsvSource("3", "6")
-    fun `evaluate numbers multiple of 3`(number: Int){
-        assertEquals("Fizz", fizzBuzz.evaluate(number))
+    fun `evaluate numbers multiple of 3`(number: Int) {
+        assertEquals("Fizz", fizzBuzz.generateValues()[number - 1])
     }
 
     @ParameterizedTest
     @CsvSource("5", "10")
-    fun `evaluate numbers multiple of 5`(number: Int){
-        assertEquals("Buzz", fizzBuzz.evaluate(number))
+    fun `evaluate numbers multiple of 5`(number: Int) {
+        assertEquals("Buzz", fizzBuzz.generateValues()[number - 1])
     }
 
     @ParameterizedTest
     @CsvSource("15", "30")
-    fun `evaluate numbers multiple of 3 and 5`(number: Int){
-        assertEquals("FizzBuzz", fizzBuzz.evaluate(number))
+    fun `evaluate numbers multiple of 3 and 5`(number: Int) {
+        assertEquals("FizzBuzz", fizzBuzz.generateValues()[number - 1])
     }
 
     @Test
     fun `generate values to print`() {
-        val evaluatedNumbers = fizzBuzz.generateValues()
-        assertEquals(100, evaluatedNumbers.size)
+        assertEquals(100, fizzBuzz.generateValues().size)
     }
 
 }
