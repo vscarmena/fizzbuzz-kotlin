@@ -9,15 +9,11 @@ class FizzBuzz {
     }
 
     private fun evaluate(number: Int): String {
-        if (number % 3 == 0 && number % 5 == 0) {
-            return "FizzBuzz"
+        return when {
+            number % 3 == 0 && number % 5 == 0 -> "FizzBuzz"
+            number % 3 == 0 -> "Fizz"
+            number % 5 == 0 -> "Buzz"
+            else -> number.toString()
         }
-        if (number % 3 == 0) {
-            return "Fizz"
-        }
-        if (number % 5 == 0) {
-            return "Buzz"
-        }
-        return number.toString()
     }
 }
