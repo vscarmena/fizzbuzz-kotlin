@@ -1,6 +1,6 @@
 # FizzBuzz Kata 
 
-This is the implementation for solving [FizzBuzz Kata](https://kata-log.rocks/fizz-buzz-kata) in Kotlin with TDD.
+The famous [FizzBuzz Kata](https://kata-log.rocks/fizz-buzz-kata) in Kotlin with [ApprovalTest](https://approvaltests.com/) and a TDD approach.
 
 ## Description
 
