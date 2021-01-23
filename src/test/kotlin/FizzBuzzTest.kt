@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
@@ -36,6 +37,12 @@ class FizzBuzzTest {
     @CsvSource("15", "30")
     fun `evaluate numbers multiple of 3 and 5`(number: Int){
         assertEquals("FizzBuzz", fizzBuzz.evaluate(number))
+    }
+
+    @Test
+    fun `generate values to print`() {
+        val evaluatedNumbers = fizzBuzz.generateValues()
+        assertEquals(100, evaluatedNumbers.size)
     }
 
 }
