@@ -1,3 +1,3 @@
-fun main(args: Array<String>) {
-    println("FizzBuzz Kata")
+fun main() {
+    FizzBuzz().generateValues().stream().forEach(System.out::println)
 }
