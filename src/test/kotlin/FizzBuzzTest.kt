@@ -21,4 +21,9 @@ class FizzBuzzTest {
         assertEquals("2", fizzBuzz.evaluate(2))
     }
 
+    @Test
+    fun `evaluate number 3 return Fizz`() {
+        assertEquals("Fizz", fizzBuzz.evaluate(3))
+    }
+
 }
